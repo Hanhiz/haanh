@@ -19,11 +19,11 @@
       </li>
       <li>
         <p class="font-semibold">Customer:</p>
-        <p><%= @booking.customer %></p>
+        <p><%= @booking.customer.first_name %></p>
       </li>
       <li>
         <p class="font-semibold">Package:</p>
-        <p><%= @booking.package %></p>
+        <p><%= @booking.package.package_name %></p>
       </li>
   </ul>
 </div>

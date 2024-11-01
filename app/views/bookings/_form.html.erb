@@ -17,11 +17,12 @@
       </div>
   <div class="mb-6">
         <%= form.label :customer_id, class: label_class %>
-          <%= form.text_field :customer_id, class: input_class %>
+          <%= form.select :customer_id, options_from_collection_for_select( Customer.all, 'id', 'first_name', selected = booking.customer_id), class: label_class %>
+
       </div>
   <div class="mb-6">
         <%= form.label :package_id, class: label_class %>
-          <%= form.text_field :package_id, class: input_class %>
+          <%= form.select :package_id, options_from_collection_for_select( Package.all, 'id', 'package_name', selected = booking.package_id), class: label_class %>
       </div>
 
 <%= form.submit class: button_class(theme: 'primary') %>
